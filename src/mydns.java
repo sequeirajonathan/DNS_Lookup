@@ -31,7 +31,7 @@ public class mydns {
     }
 
     private static void display() {
-        System.out.println("Usage: java -jar DNSlookup.jar rootDNS name ");
+        System.out.println("       java -jar DNSlookup.jar rootDNS name ");
         System.out.println("       rootDNS - the IP address (in dotted form) of the root");
         System.out.println("                 DNS server you are to start your search at");
         System.out.println("       name    - fully qualified domain name to lookup");

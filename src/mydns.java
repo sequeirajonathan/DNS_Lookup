@@ -7,8 +7,6 @@ public class mydns {
         final int MAX_ARGUMENTS = 3;
         final int SOCKET = 9876;
         
-
-        args = new String[] {"cs.fiu.edu","202.12.27.33"};
         int argCount = args.length;
         InetAddress rootNameServer;
 
@@ -17,7 +15,7 @@ public class mydns {
             return;
         }
 
-        DNSClient client = new DNSClient(args[1], args[0], SOCKET);
+        DNSClient client = new DNSClient(args[0], args[1], SOCKET);
 
         rootNameServer = InetAddress.getByName(client.getDnsString());
 

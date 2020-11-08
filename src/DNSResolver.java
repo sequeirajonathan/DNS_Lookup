@@ -180,7 +180,7 @@ public class DNSResolver {
     }
 
     private void printRDATA(ArrayList<RData> RDataArrayList, DNSClient client) {
-        
+
         int ans = 0;
 
         if (answerCount >= 1) {
@@ -194,11 +194,11 @@ public class DNSResolver {
         int ns = 0;
 
         for (int i = 0; i < RDataArrayList.size(); i++) {
-            if (RDataArrayList.get(i).getNAME() != null && RDataArrayList.get(i).getIP() == null && RDataArrayList.get(i).getNS().trim().length() > 4) {
+            if (RDataArrayList.get(i).getNAME() != null && RDataArrayList.get(i).getIP() == null
+                    && RDataArrayList.get(i).getNS().trim().length() > 4) {
                 ns++;
             }
         }
-
 
         int add = 0;
 
@@ -207,7 +207,6 @@ public class DNSResolver {
                 add++;
             }
         }
-
 
         System.out.println("----------------------------------------------------------------");
         System.out.println("DNS server to query: " + client.getDnsString().replaceAll("[/]", ""));
@@ -229,7 +228,8 @@ public class DNSResolver {
         System.out.println("Authoritive Section:");
 
         for (int i = 0; i < RDataArrayList.size(); i++) {
-            if (RDataArrayList.get(i).getNAME() != null && RDataArrayList.get(i).getIP() == null && RDataArrayList.get(i).getNS().trim().length() > 4) {
+            if (RDataArrayList.get(i).getNAME() != null && RDataArrayList.get(i).getIP() == null
+                    && RDataArrayList.get(i).getNS().trim().length() > 4) {
                 System.out.println("\tName: " + RDataArrayList.get(i).getNAME().trim() + "  Name Server: "
                         + RDataArrayList.get(i).getNS().trim());
             }
